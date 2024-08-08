@@ -24,6 +24,7 @@ class CKEditor5_Plugin implements Typecho_Plugin_Interface
         $ckEditor5 = Typecho_Common::url('CKEditor/ckeditor5', Helper::options()->pluginUrl);
         echo <<<CODE
                 <link rel="stylesheet" href="{$ckEditor5}/ckeditor5.css" />
+                <style>.ck-content {   height: 400px; resize: vertical; }</style>
                 <script type="importmap">
                 {
                     "imports": {
@@ -32,8 +33,6 @@ class CKEditor5_Plugin implements Typecho_Plugin_Interface
                     }
                 }
                 </script>
-                <script></script>
-                
                 <script type="module" src="{$ckEditor5}/init.js"></script>
         CODE;
     }
