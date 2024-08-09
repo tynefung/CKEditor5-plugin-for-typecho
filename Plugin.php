@@ -21,7 +21,7 @@ class CKEditor5_Plugin implements Typecho_Plugin_Interface
     public static function personalConfig(Typecho_Widget_Helper_Form $form){}
 
     public static function render() {
-        $ckEditor5 = Typecho_Common::url('CKEditor/ckeditor5', Helper::options()->pluginUrl);
+        $ckEditor5 = Typecho_Common::url('CKEditor5/ckeditor5', Helper::options()->pluginUrl);
         echo <<<CODE
                 <link rel="stylesheet" href="{$ckEditor5}/ckeditor5.css" />
                 <style>.ck-content {   height: 400px; resize: vertical; }</style>
